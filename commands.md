@@ -59,7 +59,7 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 - `git add [file]` - add this file only
 - `git add *.c` - add all files with .c extension
 
-1. First Commit
+3. First Commit
 -`git commit -m "Initial commit"`
 
 ### Clone
@@ -70,3 +70,27 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 `git clone https://github.com/makeevstranik/git-practice.git`
 - Clone and create other folder
 `git clone https://github.com/makeevstranik/git-practice.git newFolderName`
+
+### Add new file
+
+- watch status `git status` or short view `git status -s`
+- add new files `git add modifiedFileName` or for all files `git add .`
+
+### Ignore files
+
+- create gitignore `cat .gitignore`
+
+#### example:
+- `man gitignore` - whatch help
+- `*.[oa]` ignore all files ending with *o* or *a*
+- `*~` ignore all files ending with ~
+- `# this is a comment in gitignore` 
+- `*.txt` ignore all txt files,
+- `!important.txt` but exclude important.txt file
+- `ignoreFolder/` ignore all files in *ignoreFolder*
+
+
+
+
+
+

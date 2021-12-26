@@ -35,7 +35,7 @@ for all rep.:
 - users name `git config --global user.name "Makeev Evgeny"`  
 - email `git config --global user.email makeevstranig@gmail.com`
 for current rep if it needs:
-- `git config user.name "Gena Bookin"` 
+- `git config user.name "Gena Bookin"`
 
 change default (*master*) branch name to *main* **DON'T USE IT!**
 `git config --global init.defaultBranch main`
@@ -49,17 +49,17 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 
 ### Creation
 
-1. Initiation
+1 Initiation
 
 - `git init` - create
 
-2. Add files to Index
+2 Add files to Index
 
 - `git add .` - add all current files
 - `git add [file]` - add this file only
 - `git add *.c` - add all files with .c extension
 
-3. First Commit
+3 First Commit
 -`git commit -m "Initial commit"`
 
 ### Clone
@@ -80,17 +80,21 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 
 - create gitignore `cat .gitignore`
 
-#### example:
-- `man gitignore` - whatch help
+#### ignore example
+
+- `man gitignore` - watch help
 - `*.[oa]` ignore all files ending with *o* or *a*
 - `*~` ignore all files ending with ~
-- `# this is a comment in gitignore` 
+- `# this is a comment in gitignore`
 - `*.txt` ignore all txt files,
 - `!important.txt` but exclude important.txt file
 - `ignoreFolder/` ignore all files in *ignoreFolder*
+- `that is a simple`
 
+### Watch staged changes
 
+- what is changed but not staged :  `git diff`
+- what is staged and is about to commit: `git diff --staged`
 
-
-
+### Commit
 

@@ -98,3 +98,14 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 
 ### Commit
 
+- `git commit` - open editor for comment and then commit
+- `git commit -m "this is my comment"` - commit whit comment
+- `git commit -a -m "i did not add before this commit!"`commit all watching files without *add* command
+  
+### Delete file from git watching
+
+- Full delete a file from git watching and from memory: `git rm fileName`
+- the same but if that file is already staged: `git rm -f stagedFileName`
+- delete a file from git watching but not from memory: `git rm --cached fileName`
+- the same with whole folder: `git rm folderName/\*.log`
+  

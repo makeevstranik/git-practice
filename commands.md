@@ -109,4 +109,15 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 - the same with whole folder: `git rm folderName/\*.log`
 - delete a file from git watching but not from memory: `git rm --cached fileName`
 
-  
+### Commit history
+
+- `git log` shows all commit history
+      * `git log --since=2.weeks` the same only since 2 weeks
+      * `git log --since="2021-12-20"`
+      * `git log --before="2020-12-12"`
+      * `git log --since="5 day"`
+-  `git log -p -2` shows all commits with changes (2 maximum)
+-  `git log --stat` shows all commits with short info
+-  `git log --pretty=oneline` the same using 1 line for one commit
+-  `git log --graph` graph for commits and branches
+-  `git log --grep "only this message"`  shows commits with definite message 

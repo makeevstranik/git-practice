@@ -56,10 +56,15 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 2 Add files to Index
 
 - `git add .` - add all current files
-- `git add [file]` - add this file only
+- `git add file_name` - add this file only
 - `git add *.c` - add all files with .c extension
+  
+3 Exclude file from index 
 
-3 First Commit
+- `git reset HEAD file_name` - unstage *file_name*
+- `git restore --staged file_name` - the same command
+
+4 First Commit
 -`git commit -m "Initial commit"`
 
 ### Clone
@@ -82,7 +87,7 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 
 #### ignore example
 
-- `man gitignore` - watch help
+- `man gitignore` - watch helpgit 
 - `*.[oa]` ignore all files ending with *o* or *a*
 - `*~` ignore all files ending with ~
 - `# this is a comment in gitignore`
@@ -118,8 +123,46 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
   - `git log --before="2020-12-12"`
   - `git log --since="5 day"`
 
--  `git log -p -2` shows all commits with changes (2 maximum)
--  `git log --stat` shows all commits with short info
--  `git log --pretty=oneline` the same using 1 line for one commit
--  `git log --graph` graph for commits and branches
--  `git log --grep "only this message"`  shows commits with definite message 
+- `git log -p -2` shows all commits with changes (2 maximum)
+- `git log --stat` shows all commits with short info
+- `git log --pretty=oneline` the same using 1 line for one commit
+- `git log --graph` graph for commits and branches
+- `git log --grep "only this message"`  shows commits with definite message
+
+### Cancel changes
+
+- `git commit -m "this commit will be changed"`  current commit
+- `git add forgotten_file` - add forgotten file
+- `git commit --amend` - cancel current commit by adding new file there
+- `git checkout -- file_notToBeSaved` - **Before commit!** cancel all changes in file
+- `git restore file_notToBeSaved` - the same command
+
+### Remote rep
+
+1 look at remote rep:
+
+- `git remote` 
+- `git remote -v` - show remote with address
+
+2 add remote:
+
+- `git remote add short_name [url]` - add remote rep from url
+
+3 get changes from remote:
+  
+- `git fetch name_rep` - get changes but not merge (as *pull*)
+- `git pull` - get changes and merge them
+
+4 send changes to remote:
+
+- `git push` - send branch *master* to rep *origin* (default for cloned rep)
+- `git push remote_name branch_name` - send any rep
+
+5 show remote
+
+- `git remote show origin` - show default remote rep
+
+6 delete and rename
+
+- `git remote rename old_short_name new_short_name` - rename rep
+- `git remote remove name_rep` - delete rep

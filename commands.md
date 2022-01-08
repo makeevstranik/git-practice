@@ -181,7 +181,7 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 
 #### tag any previous commits
 
-1 `git log --pretty=oneline` - show commits
+1 `git log --pretty=oneline` - show commits  
 2 `git tag -a 9fceb02 -m "message"` - tag commit with hash 9fceb02 (just several first symbols are enough)
 
 #### send to remote

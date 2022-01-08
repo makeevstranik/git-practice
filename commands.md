@@ -166,3 +166,31 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 
 - `git remote rename old_short_name new_short_name` - rename rep
 - `git remote remove name_rep` - delete rep
+
+### Tags
+
+#### show
+
+- `git tag` show all tags
+- `git tag --l "v1.*"` show all tags having *v1.*
+
+#### create
+
+- `git tag -a tag_label -m "message_for_tag"` - create annotated tag *tag_label* with message (tag also automatically has hash, name, email) - **using for adding meta info to commit**
+- `git tag tag_label` - create light tag with *tag_label* only - **using for simple commit search**
+
+#### tag any previous commits
+
+1 `git log --pretty=oneline` - show commits
+2 `git tag -a 9fceb02 -m "message"` - tag commit with hash 9fceb02 (just several first symbols are enough)
+
+#### send to remote
+
+**push doesn't sends tags to remote!**
+
+- `git push origin tag_name` send to *origin* tag *tag_name*
+- `git push origin --tags` send all tags
+
+#### delete
+
+`git tag -d tag_name` - delete tag *tag_name*

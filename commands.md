@@ -194,3 +194,7 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 #### delete
 
 `git tag -d tag_name` - delete tag *tag_name*
+
+---
+
+## Git Branches

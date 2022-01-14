@@ -113,6 +113,7 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 - the same but if that file is already staged: `git rm -f stagedFileName`
 - the same with whole folder: `git rm folderName/\*.log`
 - delete a file from git watching but not from memory: `git rm --cached fileName`
+- delete git from project: `rm -rf .git*`
 
 ### Commit history
 
@@ -198,3 +199,15 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 ---
 
 ## Git Branches
+
+### Create new branch
+
+**master** - default name for main branch
+
+- `git branch test` - create new branch **test**, but not move HEAD from **master**
+- `git log --oneline --decorate` - show HEAD pointer
+
+### Switch branches
+
+- `git checkout test` - switch HEAD to **test** branch
+-  

@@ -205,9 +205,26 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 **master** - default name for main branch
 
 - `git branch test` - create new branch **test**, but not move HEAD from **master**
+- `git checkout -b test` - create new branch **test**, and move HEAD there
+- `git switch -c test` - the same command
 - `git log --oneline --decorate` - show HEAD pointer
 
 ### Switch branches
 
 - `git checkout test` - switch HEAD to **test** branch
--  
+- `git switch test` - the same command
+- `git log --oneline --decorate --graph -all` show graph branches story
+- `git switch -` - move back to previous branch
+  
+### Merge branches
+
+- `git merge test` - from main branch!!! (or other branch where the **test** is about to be merged to)
+- `git branch -d test` - delete **test** branch
+
+### Manage branches
+
+- `git branch` - show all branches
+- `git branch -v` - show all branches with last commit
+- `git branch --merged` - show branches that were merged in current branch
+- `git branch --no-megrged` - ... were not merged
+  

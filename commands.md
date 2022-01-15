@@ -223,8 +223,24 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 
 ### Manage branches
 
-- `git branch` - show all branches
+- `git branch` - show all local branches
+- `git branch --all`- show local and remote branches
 - `git branch -v` - show all branches with last commit
 - `git branch --merged` - show branches that were merged in current branch
 - `git branch --no-megrged` - ... were not merged
   
+### Rename branches
+
+Branches that are using by other developers must't be renamed!
+Be very careful renaming the main branch!
+
+- `git branch --move old_name new_name` - rename branch locally
+- `git push --set-upstream origin new_name` - then rename branch in remote rep.
+- `git push origin --delete old_name` - delete old branch
+  
+#### Rename main branch
+
+It'd better to think about the name of the main branch before starting a project in oder not to rename it further!
+
+If it's inevitably needs to be done warn your colleges and follow instructions p. 195 and may the Force be with you!
+

@@ -39,7 +39,7 @@
 - `sudo command` - Run command with the security privileges of the superuser (Super User DO)
 - `open filename` - Opens a file ( as if you double clicked it )
 - `top` - Displays active processes. Press q to quit
-- `editorname filename` - Opens the file using this editor
+- `open -a editorname filename` - Opens the file using this editor
 - `reset` - Resets the terminal display
 
 ## CHAINING COMMANDS
@@ -72,6 +72,7 @@
 - `cd ../../` - Move 2 levels up
 - `cat` - Concatenate to screen
 - `rm [file]` - Remove a file, e.g. rm data.tmp
+- `rm *` - remove all files
 - `rm -i [file]` - Remove with confirmation
 - `rm -r [dir]` - Remove a directory and contents
 - `rm -f [file]` - Force removal without confirmation

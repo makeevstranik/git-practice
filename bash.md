@@ -113,6 +113,7 @@
 - `whatis [command]` - Gives a one-line description of [command]
 - `apropos [search-pattern]` - Searches for command with keywords in description
 
+`emacs -batch -l dunnet` - play game.  
 
-
-
+[bash command tutor](https://www.learnenough.com/command-line-tutorial/basics)
+[Git Cheatsheet](https://github.com/0nn0/git-basics-cheatsheet)

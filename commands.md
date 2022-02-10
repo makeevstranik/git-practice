@@ -95,6 +95,7 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 - `!important.txt` but exclude important.txt file
 - `ignoreFolder/` ignore all files in *ignoreFolder*
 - `that is a simple`
+- [github swift gitignoe](https://github.com/github/gitignore/blob/main/Swift.gitignore)
 
 ### Watch staged changes
 

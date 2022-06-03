@@ -82,6 +82,9 @@
 - `pbcopy < [file]` - Move/Rename, e.g. mv file1.ad /tmp
 - `pbpaste` - Paste clipboard contents
 - `pbpaste > [file]` - Paste clipboard contents into file, pbpaste > paste-test.txt
+- `echo "this is a line rewrites file" > file.txt` - create file (if not exists) and write (rewrite) string
+- `echo "this is a line append to the end" >> file.txt` - create file (if not exists) and append string to the end
+- `printf "Hello, I'm %s.\n" > file.txt` - create (if not exists) and write (rewrite) format string
 
 ## DIRECTORY MANAGEMENT
 

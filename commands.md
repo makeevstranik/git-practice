@@ -139,6 +139,11 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 - `git checkout -- file_notToBeSaved` - **Before commit!** cancel all changes in file
 - `git restore file_notToBeSaved` - the same command
 
+### Recover git state
+
+- `git reflog` - show git state log (press 🔲 q)
+- `git reset HEAD@{CHOOSE_COMMIT} --hard` recover state to this commit
+
 ### Remote rep
 
 1 look at remote rep:
@@ -158,7 +163,7 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 4 send changes to remote:
 
 - `git push` - send branch *master* to rep *origin* (default for cloned rep)
-- `git push remote_name branch_name` - send any rep
+- `git push remote_name branch_name` - send any rep 
 
 5 show remote
 

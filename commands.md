@@ -101,6 +101,7 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 
 - what is changed but not staged :  `git diff`
 - what is staged and is about to commit: `git diff --staged`
+- `git show [commit_hash]` - changes in commit_hash commit
 
 ### Commit
 

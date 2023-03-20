@@ -108,6 +108,10 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 - `git commit` - open editor for comment and then commit
 - `git commit -m "this is my comment"` - commit whit comment
 - `git commit -a -m "i did not add before this commit!"`commit all watching files without *add* command
+
+### Checkout
+
+- `git checkout [hash_commit]` - moove HEAD to commit (but not reset!) 
   
 ### Delete file from git watching
 
@@ -142,8 +146,10 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 
 ### Recover git state
 
+- `git reset --hard [commit_hash]` - moove HEAD to this commit delete all commits after it
 - `git reflog` - show git state log (press 🔲 q)
 - `git reset HEAD@{CHOOSE_COMMIT} --hard` recover state to this commit
+- `git reset --hard ORIG_HEAD` cancel last *reset* (recover all commits) and moove HEAD to previous stage
 
 ### Remote rep
 
@@ -211,6 +217,7 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 
 **master** - default name for main branch
 
+- `git branch ` - see current branch
 - `git branch test` - create new branch **test**, but not move HEAD from **master**
 - `git checkout -b test` - create new branch **test**, and move HEAD there
 - `git switch -c test` - the same command
@@ -225,7 +232,7 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
   
 ### Merge branches
 
-- `git merge test` - from main branch!!! (or other branch where the **test** is about to be merged to)
+- `git merge test` - from main branch!!! (`git checkout master`) (or other branch where the **test** is about to be merged to)
 - `git branch -d test` - delete **test** branch
 
 ### Manage branches

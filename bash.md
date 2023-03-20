@@ -86,6 +86,12 @@
 - `echo "this is a line append to the end" >> file.txt` - create file (if not exists) and append string to the end
 - `printf "Hello, I'm %s.\n" > file.txt` - create (if not exists) and write (rewrite) format string
 
+## VIM FILE WORKING
+- `vim file1.txt` - open file with vim
+- *Shift + : + x* - quit save vim
+- *Shift + : + w* - save
+- *Shift + : + q* - quit if where not changes
+
 ## DIRECTORY MANAGEMENT
 
 - `mkdir [dir]` - Create new directory

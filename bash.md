@@ -91,6 +91,8 @@
 - *Shift + : + x* - quit save vim
 - *Shift + : + w* - save
 - *Shift + : + q* - quit if where not changes
+- *i* - switch to redactor mode
+- *esc* - switch out of redactor mode
 
 ## DIRECTORY MANAGEMENT
 

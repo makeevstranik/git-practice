@@ -146,7 +146,7 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 
 ### Recover git state
 
-- `git reset --hard [commit_hash]` - moove HEAD to this commit delete all commits after it
+- `git reset --hard [commit_hash]` - moove HEAD to this commit delete(hide) all commits after it
 - `git reflog` - show git state log (press 🔲 q)
 - `git reset HEAD@{CHOOSE_COMMIT} --hard` recover state to this commit
 - `git reset --hard ORIG_HEAD` cancel last *reset* (recover all commits) and moove HEAD to previous stage

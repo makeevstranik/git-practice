@@ -6,7 +6,7 @@ check version: `git --version`
 
 ### Help
 
-- `git help [command]`
+- `git help [command]` (`/ anyword` search, `n` next page, `[shift]n` prev page, `q` exit)
 - `git [command] --help`
 - `man git-[command]`
 - `git [command] -h` - short info
@@ -258,3 +258,6 @@ It'd better to think about the name of the main branch before starting a project
 
 If it's inevitably needs to be done warn your colleges and follow instructions p. 195 and may the Force be with you!
 
+## Alias for command
+`git config --global alias.c anygitcommand` - creates globaly `c` as alias for  `anygitcommand`
+`git c --list` - look up `c` meaning

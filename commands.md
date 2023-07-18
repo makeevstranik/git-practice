@@ -108,6 +108,7 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 - `git commit` - open editor for comment and then commit
 - `git commit -m "this is my comment"` - commit whit comment
 - `git commit -a -m "i did not add before this commit!"`commit all watching files without *add* command
+- `git commit --author='Name <email> --date='01.01.2001'` change Author of commit
 
 ### Checkout
 

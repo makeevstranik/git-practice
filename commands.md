@@ -63,6 +63,8 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 
 - `git reset HEAD file_name` - unstage *file_name*
 - `git restore --staged file_name` - the same command
+- delelete file from folder then `git add myFile` then `git commit` - How to delete file from index
+- 
 
 4 First Commit
 -`git commit -m "Initial commit"`
@@ -109,6 +111,7 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 - `git commit -m "this is my comment"` - commit whit comment
 - `git commit -a -m "i did not add before this commit!"`commit all watching files without *add* command
 - `git commit --author='Name <email> --date='01.01.2001'` change Author of commit
+- `git commit -m myFile` - commit only myFile from index
 
 ### Checkout
 
@@ -121,7 +124,10 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 - the same with whole folder: `git rm folderName/\*.log`
 - delete a file from git watching but not from memory: `git rm --cached fileName`
 - delete git from project: `rm -rf .git*`
-
+  
+### Rename file
+- `git mv <oldName> <newName>` - rename oldName and add to index
+  
 ### Commit history
 
 - `git log` shows all commit history

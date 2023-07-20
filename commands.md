@@ -112,10 +112,12 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 - `git commit -a -m "i did not add before this commit!"`commit all watching files without *add* command
 - `git commit --author='Name <email> --date='01.01.2001'` change Author of commit
 - `git commit -m myFile` - commit only myFile from index
+- `git commit --amend` - redacting last commit
 
 ### Checkout
 
-- `git checkout [hash_commit]` - moove HEAD to commit (but not reset!) 
+- `git checkout [hash_commit]` - moove HEAD to commit (but not reset!)
+- `git checkout -f [branch]` - moove HEAD to branch and force delete all not commited changes in prev branch
   
 ### Delete file from git watching
 
@@ -150,6 +152,8 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 - `git commit --amend` - cancel current commit by adding new file there
 - `git checkout -- file_notToBeSaved` - **Before commit!** cancel all changes in file
 - `git restore file_notToBeSaved` - the same command
+- `git checkout -f HEAD` - simple way to delete all changes in this branch 
+
 
 ### Recover git state
 
@@ -249,7 +253,14 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 - `git branch -v` - show all branches with last commit
 - `git branch --merged` - show branches that were merged in current branch
 - `git branch --no-megrged` - ... were not merged
-  
+- `git stash` - collect and remove all changes in branch
+- `git stash pop` - get back all changes from last stash
+- работали в мастер забыли создать ветку нужна новая --> не коммимтим делаем `git chekout -b newBranch` и коммитим в уже в новой ветке
+-  `git checkout <commit hash> file`  восстановить один или несколько файлов из старого коммита  
+-  `git checkout HEAD file` откатить изменения только на одном файле
+-  `git show HEAD~ : file` - посмотреть file на один коммит назад (~2 на два)
+-  `git reflog --date` - история изменений по текущей ветке c датами
+
 ### Rename branches
 
 Branches that are using by other developers must't be renamed!

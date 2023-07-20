@@ -144,7 +144,13 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 - `git log --pretty=oneline` the same using 1 line for one commit
 - `git log --graph` graph for commits and branches
 - `git log --grep "only this message"`  shows commits with definite message
+- `git log master..feature` shows only feature commits up to crossing master
+- `git log <file>` shows commits where file was changed
+- `git log GmyMethod -p` shows commits where myMethod was changed
 
+- `git blame <file>` shows all history whith authors for file
+
+  
 ### Cancel changes
 
 - `git commit -m "this commit will be changed"`  current commit
@@ -245,6 +251,37 @@ change default (*master*) branch name to *main* **DON'T USE IT!**
 
 - `git merge test` - from main branch!!! (`git checkout master`) (or other branch where the **test** is about to be merged to)
 - `git branch -d test` - delete **test** branch
+- `git merge --no-ff <somebranch>` запретить слияние простой перемоткой (используется очень часто для получения явного коммита слияния и очевидной точки где конкретно сошлись ветки)
+
+#### В ситуациях когда ветки разошлись (нет прямого потомка) будет истинное слияние без простой перемотки HEAD соответственно будет коммит слияния и возможные конфликты 
+ 
+  + `git diff --name-only master feature` быстро посмотреть файлы в которых есть разное состояние
+  + `git merge feature` - мерджим feature(theirs) в master (ours)
+  + при конфликте мы попадаем в промежуточное состояние прерванного слияния (в индексе сразу 3 версии файла) - допустим конфликт в файле file
+  + искусственно попасть в состояние ПС можно так `git merge feature --no-commit` - это нужно в случае когда гит автоматически сливает ветки семантически неправильно
+  + `git checkout --ours <file>` - выбрать вариант master
+  + `git checkout --theirs <file>` - выбрать вариант feature
+  + `git reset --hard` прекратить слияние вернуть состояние до merge
+  + `git reset --merge` прекратить слияние оставить незакомиченные изменения в файлах которые не участвовали в слиянии
+  + после изменений <file> нужно добавить в индекс `git add <file>` и сделать коммит слияния (два родителя) `git commit` or `git merge --continue`
+  + `git resert --hard HEAD~` отмена слияния после мерджа
+---
+- `git merge --squash fixBranch` - создает коммит слияния с fixBranch но без второго родителя (только master) таким образом все промежуточные коммиты из fixBranch будут не достижимы (мы как бы сожмем все в один коммит)
+
+### Cherry-pick
+> осуществляет копирование одного или группы коммитов на текущую ветку - в отличие от merge коммит слияния не создается, просто указанный коммит становится следующим в ветке с переносом на него HEAD
+
+- `git cherry-pick <hash>` копирование коммита в master (можно указать несколько)
+- `git cherry-pick -n <hash>` копирование в индекс (изменения просто добавятся в индекс в modified состоянии без копирования коммита) 
+- `git cherry-pick master..feature` копирование всех коммитов из feature
+
+Дествия при конфликте (состояние промежуточного копирования)
+- `git cherry-pick --abort`  отменить все
+- `git cherry-pick --continue` подолжить с ручным разрешением конфликтов (после `git add` + `git cherry-pick --continue`)
+- `git cherry-pick --quit` остановиться на текущей точке (коммиты до конфликта скопируются)
+  
+### Rebase
+
 
 ### Manage branches
 
